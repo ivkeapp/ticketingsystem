@@ -64,15 +64,6 @@
                            </div>
                         </div>
 
-                        <div class="form-floating mb-3">
-                           <select name="department" class="form-control">
-                              <?php foreach($departments as $d):?>
-                                       <option value="<?=$d->id?>"><?=$d->name?></option>
-                              <?php endforeach ?>
-                           </select>
-                           <label for="types">Department</label>
-                        </div>
-
                         <div class="mt-4 mb-0">
                            <div class="d-grid"><button type="submit" class="btn btn-success btn-block"><i class="fas fa-save"></i> Sačuvaj</button></div>
                         </div>

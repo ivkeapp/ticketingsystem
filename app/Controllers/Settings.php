@@ -19,10 +19,11 @@ class Settings extends BaseController {
 
     public function index()
 	{
+        //session()->remove('message');
         $userModel = new User();
-        $department = new Groups();
+        //$department = new Groups();
         $data['user'] = $userModel->find(user_id());
-        $data['departments'] = $department->findAll();
+        //$data['departments'] = $department->findAll();
         return view('settings', $data);
     }
 
@@ -31,10 +32,9 @@ class Settings extends BaseController {
         if($this->validate([
             'username' => [
                 'label'  => 'korisničko ime',
-                'rules'  => 'required|is_unique[users.username]',
+                'rules'  => 'required',
                 'errors' => [
-                    'required' => 'Morate uneti {field}.',
-                    'is_unique' => '{field} {value} je zauzeto.'
+                    'required' => 'Morate uneti {field}.'
                 ]
             ],
             'name' => [
@@ -53,24 +53,16 @@ class Settings extends BaseController {
             ],
             'email' => [
                 'label'  => 'email',
-                'rules'  => 'required|valid_email|is_unique[users.email]',
+                'rules'  => 'required|valid_email',
                 'errors' => [
                     'required'    => 'Morate uneti {field}.',
                     'valid_email' => 'Mail adresa {value} nije validna.',
                     'is_unique'   => 'Mail adresa {value} je već u upotrebi.'
                 ]
             ],
-            'password' => [
-                'label'  => 'šifra',
-                'rules'  => 'min_length[8]',
-                'errors' => [
-                    'required' => 'Morate uneti šifru.',
-                    'min_length' => 'Šifra mora biti duža od 8 karaktera.'
-                ]
-            ],
             'pass_confirm' => [
                 'label'  => 'potvrda sifre',
-                'rules'  => 'matches[password]',
+                'rules'  => 'required_with[password]|matches[password]',
                 'errors' => [
                     'required' => 'Morate ponoviti šifru.',
                     'matches' => 'Šifra se mora podudarati.'
@@ -114,7 +106,7 @@ class Settings extends BaseController {
                     ];
                     $logModel->insert($log);
                 }
-                return redirect()->to(base_url());
+                return redirect()->back();
             } else {
                 $staff = [
                     'username'     => $this->request->getPost('username'),
@@ -146,8 +138,10 @@ class Settings extends BaseController {
                         'user' => user_id()
                     ];
                     $logModel->insert($log);
+
+                    //session()->set('message', 'Podaci su uspešno promenjeni.');
                 }
-                return redirect()->back();
+                return redirect()->back()->with('message', 'Podaci su uspešno promenjeni.');
             }
         } else {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
