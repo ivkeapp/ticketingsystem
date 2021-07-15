@@ -101,10 +101,11 @@ class Staff extends BaseController
             ],
             'password' => [
                 'label'  => 'šifra',
-                'rules'  => 'required|min_length[8]',
+                'rules'  => 'required|min_length[8]|alpha_numeric_punct',
                 'errors' => [
                     'required' => 'Morate uneti šifru.',
-                    'min_length' => 'Šifra mora biti duža od 8 karaktera.'
+                    'min_length' => 'Šifra mora biti duža od 8 karaktera.',
+                    'alpha_numeric_punct' => 'Šifra može imati samo alfanumeričke karatkere i _?%&*-+=:.!$#~'
                 ]
             ],
             'pass_confirm' => [

@@ -29,12 +29,15 @@ class Settings extends BaseController {
 
     public function update()
 	{
+        $model = $this->model;
+
         if($this->validate([
             'username' => [
                 'label'  => 'korisničko ime',
-                'rules'  => 'required',
+                'rules'  => 'required|is_unique[users.username,users.id,'.user_id().']',
                 'errors' => [
-                    'required' => 'Morate uneti {field}.'
+                    'required' => 'Morate uneti {field}.',
+                    'is_unique' => 'Korisničko ime je već u upotrebi'
                 ]
             ],
             'name' => [
@@ -53,7 +56,7 @@ class Settings extends BaseController {
             ],
             'email' => [
                 'label'  => 'email',
-                'rules'  => 'required|valid_email',
+                'rules'  => 'required|valid_email|is_unique[users.email,users.id,'.user_id().']',
                 'errors' => [
                     'required'    => 'Morate uneti {field}.',
                     'valid_email' => 'Mail adresa {value} nije validna.',
@@ -69,7 +72,7 @@ class Settings extends BaseController {
                 ]
             ],
         ])){
-            $model = $this->model;
+            
             
             $password = $this->request->getPost('password');
 
