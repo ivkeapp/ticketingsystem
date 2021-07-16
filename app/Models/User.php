@@ -34,6 +34,13 @@ class User extends Model{
         ->get()->getResult();
     }
 
+    public function disableUser($id){
+        $disable = [
+            'active' => '0'
+        ];
+        $this->update($id, $disable);
+    }
+
 }
 
 ?>

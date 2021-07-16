@@ -64,7 +64,9 @@ class Tiketi extends BaseController
                 'action' => 'Marked ticket ' . $id . ' as resolved.',
                 'user' => user_id()
             ];
+            //$logModel->transStart();
             $logModel->insert($log);
+            //$logModel->transComplete();
         }
 
         return redirect()->back();

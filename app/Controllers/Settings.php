@@ -109,7 +109,7 @@ class Settings extends BaseController {
                     ];
                     $logModel->insert($log);
                 }
-                return redirect()->back();
+                return redirect()->back()->with('message', 'Podaci su uspešno promenjeni.');
             } else {
                 $staff = [
                     'username'     => $this->request->getPost('username'),

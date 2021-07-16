@@ -41,20 +41,22 @@ class Staff extends BaseController
     {
         $model = $this->model;
         $data = $model->find($id);
-        $deleted = $model->delete($id);
+        //$deleted = $model->delete($id);
 
-        if($deleted){
+        $disabled = $this->model->disableUser($id);
+
+        if($disabled){
             //$deletedTicketId = $model->getDeleteID();
             $logModel = new Log();
             if($data){
                 $log = [
-                    'action' => 'Deleted a staff user ' . $data->firstname . ' ' . $data->lastname . ', (ID: ' . $data->id . ')',
+                    'action' => 'Disabled a staff user ' . $data->firstname . ' ' . $data->lastname . ', (ID: ' . $data->id . ')',
                     'user' => user_id()
                 ];
                 $logModel->insert($log);
             } else {
                 $log = [
-                    'action' => 'Attempted deleting staff with id (' . $id . ') which doesn\'t exist',
+                    'action' => 'Attempted disabling staff with id (' . $id . ') which doesn\'t exist',
                     'user' => user_id()
                 ];
                 $logModel->insert($log);
@@ -160,7 +162,7 @@ class Staff extends BaseController
                 ];
                 $logModel->insert($log);
             }
-            return redirect()->to('staff');
+            return redirect()->back()->with('message', 'Uspešno dodat radnik.');
 
         } else {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());

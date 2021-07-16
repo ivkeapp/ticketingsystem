@@ -45,7 +45,7 @@
                      $helpArr[] = $row->department;
                      if(has_permission('staff_delete')){
                         $helpArr[] = $row->active;
-                        $helpArr[] = anchor("staff/delete/".$row->id, "<i class='fas fa-trash'></i>", ['class' => 'btn btn-danger']);
+                        $helpArr[] = anchor("staff/delete/".$row->id, "<i class='fas fa-ban'></i>", ['class' => 'btn btn-danger']);
                      }
                      $staffArray[] = $helpArr;
                   }
