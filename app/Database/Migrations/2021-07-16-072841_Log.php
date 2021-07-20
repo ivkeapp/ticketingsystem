@@ -30,6 +30,7 @@ class Log extends Migration
 			],
 		]);
 		$this->forge->addKey('id', true);
+		$this->forge->addForeignKey('user', 'users', 'id');
 		$this->forge->createTable('log');
 	}
 

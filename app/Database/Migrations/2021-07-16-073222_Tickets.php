@@ -57,6 +57,9 @@ class Tickets extends Migration
 			],
 		]);
 		$this->forge->addKey('id', true);
+		$this->forge->addForeignKey('type', 'types', 'id');
+		$this->forge->addForeignKey('brand', 'brands', 'id');
+		$this->forge->addForeignKey('staff_owner', 'users', 'id');
 		$this->forge->createTable('tickets');
 	}
 
