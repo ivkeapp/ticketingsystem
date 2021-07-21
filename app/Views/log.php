@@ -4,10 +4,10 @@
 ?>
    <main>
          <div class="container-fluid px-4">
-            <h1 class="mt-4">Tiketi</h1>
+            <h1 class="mt-4">Aktivnost</h1>
             <ol class="breadcrumb mb-4">
                <li class="breadcrumb-item"><a href="/">Kontrolna tabla</a></li>
-               <li class="breadcrumb-item active">Tiketi</li>
+               <li class="breadcrumb-item active">Aktivnost</li>
             </ol>
             <div class="card mb-4">
                <div class="card-body">
@@ -24,7 +24,7 @@
             
             <div class="card-header">
                <i class="fas fa-table me-1"></i>
-               DataTable Example
+               Aktivnost
             </div>
             <div class="card-body">
                <?php 
