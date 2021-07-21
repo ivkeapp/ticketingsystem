@@ -48,7 +48,7 @@
                   </a>
                   <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                         <nav class="sb-sidenav-menu-nested nav">
-                           <a class="nav-link" href="#">Pregled eksternih servisa</a>
+                           <?=anchor("services/index", "Pregled eksternih servisa", ['class' => 'nav-link'])?>
                            <a class="nav-link" href="#">Statistika</a>
                            <?php
                               if(has_permission('ticket_create')){
