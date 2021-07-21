@@ -48,7 +48,15 @@ class Tiketi extends BaseController
     public function delete($id)
     {
         $model = $this->model;
-        $model->delete($id);
+        $deleted = $model->delete($id);
+        if($deleted){
+            $logModel = new Log();
+            $log = [
+                'action' => 'Deleted ticket (ID: ' . $id . ').',
+                'user' => user_id()
+            ];
+            $logModel->insert($log);
+        }
         return redirect()->back();
     }
 
@@ -61,7 +69,7 @@ class Tiketi extends BaseController
             //$newTicketId = $model->getInsertID();
             $logModel = new Log();
             $log = [
-                'action' => 'Marked ticket ' . $id . ' as resolved.',
+                'action' => 'Marked ticket ID: ' . $id . ' as resolved.',
                 'user' => user_id()
             ];
             //$logModel->transStart();
@@ -111,7 +119,7 @@ class Tiketi extends BaseController
                 $newTicketId = $model->getInsertID();
                 $logModel = new Log();
                 $log = [
-                    'action' => 'Created a new ticket: ' . $newTicketId,
+                    'action' => 'Created a new ticket (ID: ' . $newTicketId . ")",
                     'user' => user_id()
                 ];
                 $logModel->insert($log);
