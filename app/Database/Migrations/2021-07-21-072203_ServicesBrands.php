@@ -11,14 +11,15 @@ class ServicesBrands extends Migration
 		$this->forge->addField([
 			'service'          => [
 				'type'           => 'INT',
-				'constraint'     => 11
+				'constraint'     => 11,
+				'unsigned'       => true,
 			],
 			'brand'          => [
 				'type'           => 'INT',
-				'constraint'     => 11
+				'constraint'     => 11,
+				'unsigned'       => true,
 			],
 		]);
-		$this->forge->addKey('id', true);
 		$this->forge->addForeignKey('service', 'authorized_services', 'id');
 		$this->forge->addForeignKey('brand', 'brands', 'id');
 		$this->forge->createTable('authorized_services_brands');
