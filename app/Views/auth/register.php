@@ -37,6 +37,14 @@
                                                 <input type="text" id="inputUsername" class="form-control <?php if(session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
                                                 <label for="inputUsername"><?=lang('Auth.username')?></label>
                                             </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" id="inputFirstname" class="form-control <?php if(session('errors.firstname')) : ?>is-invalid<?php endif ?>" name="firstname" placeholder="First name" value="<?= old('firstname') ?>">
+                                                <label for="inputFirstname">First name</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" id="inputLastname" class="form-control <?php if(session('errors.lastname')) : ?>is-invalid<?php endif ?>" name="lastname" placeholder="Last name" value="<?= old('lastname') ?>">
+                                                <label for="inputLastname">Last name</label>
+                                            </div>
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
