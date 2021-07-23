@@ -21,7 +21,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Password Recovery</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Obnova lozinke</h3></div>
                                     <div class="card-body">
                                         <?= view('Myth\Auth\Views\_message_block') ?>
                                         <div class="small mb-3 text-muted"><?=lang('Auth.enterEmailForInstructions')?></div>
@@ -36,13 +36,13 @@
                                                 </div>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <?=anchor("login", "Return to login", ['class' => 'small'])?>
+                                                <?=anchor("login", "Nazad na prijavu", ['class' => 'small'])?>
                                                 <button type="submit" class="btn btn-primary"><?=lang('Auth.sendInstructions')?></button>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="card-footer text-center py-3">
-                                        <div class="small"><?=anchor("register", "Need an account?")?></div>
+                                        <div class="small"><?=anchor("register", "Treba Vam nalog?")?></div>
                                     </div>
                                 </div>
                             </div>
