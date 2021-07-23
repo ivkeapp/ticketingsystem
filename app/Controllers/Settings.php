@@ -34,24 +34,30 @@ class Settings extends BaseController {
         if($this->validate([
             'username' => [
                 'label'  => 'korisničko ime',
-                'rules'  => 'required|is_unique[users.username,users.id,'.user_id().']',
+                'rules'  => 'required|alpha_dash|min_length[3]|max_length[20]|is_unique[users.username,users.id,'.user_id().']',
                 'errors' => [
-                    'required' => 'Morate uneti {field}.',
-                    'is_unique' => 'Korisničko ime je već u upotrebi'
+                    'required'   => 'Morate uneti {field}.',
+                    'is_unique'  => '{field} {value} je zauzeto.',
+                    'min_length' => '{field} ne može imati manje od 3 karaktera.',
+                    'max_length' => '{field} ne može imati više od 20 karaktera.'
                 ]
             ],
             'name' => [
                 'label'  => 'ime',
-                'rules'  => 'required',
+                'rules'  => 'required|min_length[2]|max_length[30]|alpha_space',
                 'errors' => [
-                    'required' => 'Morate uneti {field}.'
+                    'required' => 'Morate uneti {field}.',
+                    'min_length' => '{field} ne može imati manje od 2 karaktera.',
+                    'max_length' => '{field} ne može imati više od 30 karaktera.'
                 ]
             ],
             'surname' => [
                 'label'  => 'prezime',
-                'rules'  => 'required',
+                'rules'  => 'required|min_length[2]|max_length[30]|alpha_space',
                 'errors' => [
-                    'required' => 'Morate uneti {field}.'
+                    'required' => 'Morate uneti {field}.',
+                    'min_length' => '{field} ne može imati manje od 2 karaktera.',
+                    'max_length' => '{field} ne može imati više od 30 karaktera.'
                 ]
             ],
             'email' => [
