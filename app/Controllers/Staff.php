@@ -72,24 +72,30 @@ class Staff extends BaseController
         if($this->validate([
             'username' => [
                 'label'  => 'korisničko ime',
-                'rules'  => 'required|is_unique[users.username]',
+                'rules'  => 'required|alpha_dash|min_length[3]|max_length[20]|is_unique[users.username]',
                 'errors' => [
-                    'required' => 'Morate uneti {field}.',
-                    'is_unique' => '{field} {value} je zauzeto.'
+                    'required'   => 'Morate uneti {field}.',
+                    'is_unique'  => '{field} {value} je zauzeto.',
+                    'min_length' => '{field} ne može imati manje od 3 karaktera.',
+                    'max_length' => '{field} ne može imati više od 20 karaktera.'
                 ]
             ],
             'name' => [
                 'label'  => 'ime',
-                'rules'  => 'required',
+                'rules'  => 'required|min_length[2]|max_length[30]|alpha_space',
                 'errors' => [
-                    'required' => 'Morate uneti {field}.'
+                    'required'   => 'Morate uneti {field}.',
+                    'min_length' => '{field} ne može imati manje od 2 karaktera.',
+                    'max_length' => '{field} ne može imati više od 30 karaktera.'
                 ]
             ],
             'surname' => [
                 'label'  => 'prezime',
-                'rules'  => 'required',
+                'rules'  => 'required|min_length[2]|max_length[30]|alpha_space',
                 'errors' => [
-                    'required' => 'Morate uneti {field}.'
+                    'required'   => 'Morate uneti {field}.',
+                    'min_length' => '{field} ne može imati manje od 3 karaktera.',
+                    'max_length' => '{field} ne može imati više od 20 karaktera.',
                 ]
             ],
             'email' => [
@@ -103,10 +109,11 @@ class Staff extends BaseController
             ],
             'password' => [
                 'label'  => 'šifra',
-                'rules'  => 'required|min_length[8]|alpha_numeric_punct',
+                'rules'  => 'required|min_length[8]|max_length[16]|alpha_numeric_punct',
                 'errors' => [
                     'required' => 'Morate uneti šifru.',
                     'min_length' => 'Šifra mora biti duža od 8 karaktera.',
+                    'max_length' => 'Šifra ne može biti duža od 16 karaktera.',
                     'alpha_numeric_punct' => 'Šifra može imati samo alfanumeričke karatkere i _?%&*-+=:.!$#~'
                 ]
             ],
