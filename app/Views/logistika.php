@@ -32,33 +32,23 @@
                         $table = new \CodeIgniter\View\Table();
                         $table->setTemplate($template);
                         if(has_permission('logistika_view')){
-                           $table->setHeading('Ime i prezime', 'Korisničko ime', 'Email', 'Broj tiketa');
+                           $table->setHeading('Korisničko ime', 'Broj rešenih tiketa');
                         } else {
-                           $table->setHeading('Ime i prezime', 'Korisničko ime', 'Email');
+                           $table->setHeading('Korisničko ime');
                         }
 
-                        $countedUsersTickets = array();
-                        foreach($tickets as $t){
-                           foreach($t as $s){
-                              array_push($countedUsersTickets, $s->id);
-                           }
-                        }
-
-                        $usersArray = array();
-                        $counter = 0;
-                        foreach($usersAll as $u){
+                         $counterArray = array();
+                         foreach($tCounters as $c){
                            $helpArray = array();
-                           $helpArray[] = $u->firstname . ' ' . $u->lastname;
-                           $helpArray[] = $u->username;
-                           $helpArray[] = $u->email;
+                           $helpArray[] = $c[0]->username;
                            if(has_permission('logistika_view')){
-                              $helpArray[] = $countedUsersTickets[$counter];
+                              $helpArray[] = $c[0]->count;
                            }
-                           $usersArray[] = $helpArray;
-                           $counter++;
-                        } 
+                           $counterArray[] = $helpArray;
+                           
+                         } 
 
-                        foreach($usersArray as $u){
+                        foreach($counterArray as $u){
                            $table->addRow($u);
                         }
                         echo $table->generate();
@@ -81,33 +71,23 @@
                         $table = new \CodeIgniter\View\Table();
                         $table->setTemplate($template);
                         if(has_permission('logistika_view')){
-                           $table->setHeading('Ime i prezime', 'Korisničko ime', 'Email', 'Broj tiketa');
+                           $table->setHeading('Korisničko ime', 'Broj rešenih tiketa');
                         } else {
-                           $table->setHeading('Ime i prezime', 'Korisničko ime', 'Email');
+                           $table->setHeading('Korisničko ime');
                         }
 
-                        $countedUsersTickets = array();
-                        foreach($ticketscount as $t){
-                           foreach($t as $s){
-                              array_push($countedUsersTickets, $s->id);
-                           }
-                        }
-
-                        $usersArray = array();
-                        $counter = 0;
-                        foreach($usersAll as $u){
-                           $helpArray = array();
-                           $helpArray[] = $u->firstname . ' ' . $u->lastname;
-                           $helpArray[] = $u->username;
-                           $helpArray[] = $u->email;
-                           if(has_permission('logistika_view')){
-                              $helpArray[] = $countedUsersTickets[$counter];
-                           }
-                           $usersArray[] = $helpArray;
-                           $counter++;
+                        $counterArrayToday = array();
+                        foreach($tCountersToday as $c){
+                          $helpArray = array();
+                          $helpArray[] = $c[0]->username;
+                          if(has_permission('logistika_view')){
+                             $helpArray[] = $c[0]->count;
+                          }
+                          $counterArrayToday[] = $helpArray;
+                          
                         } 
 
-                        foreach($usersArray as $u){
+                        foreach($counterArrayToday as $u){
                            $table->addRow($u);
                         }
                         echo $table->generate();
