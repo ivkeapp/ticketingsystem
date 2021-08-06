@@ -32,6 +32,8 @@ $routes->get('tiketi/add', 'Tiketi::add', ['filter' => 'permission:ticket_create
 $routes->post('tiketi/add', 'Tiketi::attemptsavenew', ['filter' => 'permission:ticket_create']);
 $routes->get('staff/add', 'Staff::add', ['filter' => 'role:webmaster']);
 $routes->post('staff/add', 'Staff::attemptsavenew', ['filter' => 'role:webmaster']);
+$routes->get('service/add', 'Services::add', ['filter' => 'role:webmaster']);
+$routes->post('service/add', 'Services::attemptsavenew', ['filter' => 'role:webmaster']);
 $routes->get('settings/update', 'Settings::index');
 $routes->post('settings/update', 'Settings::update');
 
