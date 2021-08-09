@@ -15,10 +15,7 @@ class Log extends Migration
 				'unsigned'       => true,
 				'auto_increment' => true,
 			],
-			'date_added' => [
-				'type'      	 => 'TIMESTAMP',
-				'default'    	 => 'current_timestamp()',
-			],
+			'date_added timestamp default current_timestamp',
 			'action'     => [
 				'type'       	 => 'VARCHAR',
 				'constraint' 	 => '256',

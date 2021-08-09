@@ -19,10 +19,7 @@ class Brands extends Migration
 				'type'       => 'VARCHAR',
 				'constraint' => '128',
 			],
-			'date_added' => [
-				'type'       => 'TIMESTAMP',
-				'default' => 'current_timestamp()',
-			],
+			'date_added timestamp default current_timestamp',
 		]);
 		$this->forge->addKey('id', true);
 		$this->forge->createTable('brands');
