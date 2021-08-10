@@ -90,9 +90,9 @@ The administrator has the ability to view the number of resolved tickets for eac
 
 ## Other specifications
 
-Each page contains a navigation menu and a header.
-Each page shows a link to return to the home page.
-Each user has the option to log out of the system.
+Each page contains a navigation menu and a header.  
+Each page shows a link to return to the home page.  
+Each user has the option to log out of the system.  
 After 30 minutes of inactivity, the user will be automatically logged out of the system.
 
 ## Migration
