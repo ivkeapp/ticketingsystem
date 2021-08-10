@@ -5,10 +5,10 @@ Software system in the form of an internet application, ticketing system for IT 
 
 ## Users
 
-There are three types of users:
-• administrator,
-• logistician,
-• IT service
+There are three types of users:  
+• administrator,  
+• logistician,  
+• IT service  
 
 Registered users can log in to the system. The user has the opportunity to get access to certain parts of the application, depending on the role, after correctly entering the data. In case of incorrect data, the user will be notified with an appropriate message.
 
@@ -16,16 +16,16 @@ In addition to logging in to the system, the user has a link to a new website wi
 
 The administrator is a user with special privileges to view all sections of the system. The logistician should have the privilege of inspecting sections of the logistics sector, and the IT service technician should have the privilege of inspecting sections of the service sector.
 
-When registering a user, the following information must be entered:
-•	name,
-•	surname,
-• username (unique at the level of all users in the system),
-• password and password confirmation,
-• e-mail address (unique at the system level).
+When registering a user, the following information must be entered:  
+•	name,  
+•	surname,  
+• username (unique at the level of all users in the system),  
+• password and password confirmation,  
+• e-mail address (unique at the system level).  
 
-If the login data is entered correctly, the following checks are performed:
-• Username is a required field, must have a unique value in the system, should contain only alphanumeric characters and dashes, with a minimum of 3 characters and a maximum of 20,
-• The password should have a minimum of 8 characters and a maximum of 16, it can contain alpha-numeric characters and special characters,
+If the login data is entered correctly, the following checks are performed:  
+• Username is a required field, must have a unique value in the system, should contain only alphanumeric characters and dashes, with a minimum of 3 characters and a maximum of 20,  
+• The password should have a minimum of 8 characters and a maximum of 16, it can contain alpha-numeric characters and special characters,  
 • Basic checks of other fields.
 
 If all fields are valid, a new entity is created in the database, and if some data is not entered or does not meet the conditions, the user receives a notification in the form of fields to display errors.
@@ -44,21 +44,21 @@ Logged-in users can change personal data: username, first name, last name, email
 
 Each ticket in the system has the following fields:
 
-• title (brief description of the problem),
-• date and time of ticket opening,
-• device type,
-• device model,
-• device brand,
-• device serial number,
-• detailed description of the problem,
-• to whom the ticket was assigned,
+• title (brief description of the problem),  
+• date and time of ticket opening,  
+• device type,  
+• device model,  
+• device brand,  
+• device serial number,  
+• detailed description of the problem,  
+• to whom the ticket was assigned,  
 • status whether the ticket has been resolved.
 
-There are four pages to view and add tickets:
+There are four pages to view and add tickets:  
 
-• Review of resolved tickets,
-• Review of unresolved tickets,
-• Adding tickets,
+• Review of resolved tickets,  
+• Review of unresolved tickets,  
+• Adding tickets,  
 • My tickets.
 
 An overview of resolved and unresolved tickets is displayed in the form of a table where, in addition to the listed fields, there is a field with the option to mark tickets as resolved, which can be used only by users assigned to a given ticket or administrator, and a field for deleting tickets.
@@ -75,11 +75,11 @@ The table for services has basic fields: name and date added.
 
 ## User activities
 
-The application monitors user activity with the following items:
-• registration and deregistration of users to and from the system,
-• adding and deleting tickets,
-• changing profile data (username, first name, last name, e-mail and password),
-• marking the ticket as "Resolved",
+The application monitors user activity with the following items:  
+• registration and deregistration of users to and from the system,  
+• adding and deleting tickets,  
+• changing profile data (username, first name, last name, e-mail and password),  
+• marking the ticket as "Resolved",  
 • adding and deleting users
 
 Each user has the ability to view his activities. Activities cannot be deleted.
