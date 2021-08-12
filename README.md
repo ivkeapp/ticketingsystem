@@ -1,3 +1,112 @@
+# Ticketing system
+
+Software system in the form of an internet application, ticketing system for IT equipment services.
+## Used technologies: HTML5, CSS3, JavaScript, PHP, CodeIgniter 4 and MySQL database.
+
+## Users
+
+There are three types of users:  
+• administrator,  
+• logistician,  
+• IT service  
+
+Registered users can log in to the system. The user has the opportunity to get access to certain parts of the application, depending on the role, after correctly entering the data. In case of incorrect data, the user will be notified with an appropriate message.
+
+In addition to logging in to the system, the user has a link to a new website with a registration form and the ability to register themselves and activate the account by confirmation by e-mail. Users who are not registered or logged in cannot use the app.
+
+The administrator is a user with special privileges to view all sections of the system. The logistician should have the privilege of inspecting sections of the logistics sector, and the IT service technician should have the privilege of inspecting sections of the service sector.
+
+When registering a user, the following information must be entered:  
+•	name,  
+•	surname,  
+• username (unique at the level of all users in the system),  
+• password and password confirmation,  
+• e-mail address (unique at the system level).  
+
+If the login data is entered correctly, the following checks are performed:  
+• Username is a required field, must have a unique value in the system, should contain only alphanumeric characters and dashes, with a minimum of 3 characters and a maximum of 20,  
+• The password should have a minimum of 8 characters and a maximum of 16, it can contain alpha-numeric characters and special characters,  
+• Basic checks of other fields.
+
+If all fields are valid, a new entity is created in the database, and if some data is not entered or does not meet the conditions, the user receives a notification in the form of fields to display errors.
+
+From the home page of the system, users have the opportunity to log in to the system. They also have the ability to continue working with the rest of the system without interruption after entering the data correctly. If they enter data incorrectly, a corresponding message will be displayed.
+
+In addition to the registration and login form, the user, on the home screen, has the option to change the password in case it is forgotten. When the password is successfully changed, it returns to the user login screen.
+
+After successful login to the system, registered users are shown a control panel with a table of all open tickets. The user can filter and search for tickets.
+
+The administrator has the privilege to delete (disable) and add users in the form of two pages.
+
+Logged-in users can change personal data: username, first name, last name, email and password.
+
+## Tickets
+
+Each ticket in the system has the following fields:
+
+• title (brief description of the problem),  
+• date and time of ticket opening,  
+• device type,  
+• device model,  
+• device brand,  
+• device serial number,  
+• detailed description of the problem,  
+• to whom the ticket was assigned,  
+• status whether the ticket has been resolved.
+
+There are four pages to view and add tickets:  
+
+• Review of resolved tickets,  
+• Review of unresolved tickets,  
+• Adding tickets,  
+• My tickets.
+
+An overview of resolved and unresolved tickets is displayed in the form of a table where, in addition to the listed fields, there is a field with the option to mark tickets as resolved, which can be used only by users assigned to a given ticket or administrator, and a field for deleting tickets.
+
+The page for adding a ticket contains a form with fields: short description, device type and manufacturer in the form of a drop-down list, device model, serial number, detailed description of the fault and to whom the ticket is assigned in the form of a drop-down list. The fields of the ticket opening date and the resolution status are filled in automatically when entering the database.
+
+The "My Tickets" page lists all the tickets that have been assigned to the currently logged in user with the same options as in the above overview.
+
+## Authorized services
+
+There is a page to review the manufacturers and their respective authorized services.
+
+The table for services has basic fields: name and date added.
+
+## User activities
+
+The application monitors user activity with the following items:  
+• registration and deregistration of users to and from the system,  
+• adding and deleting tickets,  
+• changing profile data (username, first name, last name, e-mail and password),  
+• marking the ticket as "Resolved",  
+• adding and deleting users
+
+Each user has the ability to view his activities. Activities cannot be deleted.
+
+## Statistics
+
+The administrator has the ability to view the number of resolved tickets for each user and in each sector (logistics and IT service).
+
+## Other specifications
+
+Each page contains a navigation menu and a header.  
+Each page shows a link to return to the home page.  
+Each user has the option to log out of the system.  
+After 30 minutes of inactivity, the user will be automatically logged out of the system.
+
+## Migration
+
+You can migrate database simply buy running command `php spark migrate -all`
+
+*Migrations are without seeds. You need to manually add admin
+
+## Myth Auth
+
+The application uses a Myth Auth library.
+Instruction for installation can be found here:
+[Myth Auth repo](https://github.com/lonnieezell/myth-auth)
+
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
