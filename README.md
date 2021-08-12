@@ -1,7 +1,7 @@
 # Ticketing system
 ##### Tracking IT equipment service tasks.
 
-Software system in the form of an internet application.
+Software system in the form of an internet application.  
 *Used technologies: HTML5, CSS3, JavaScript, PHP, CodeIgniter 4 and MySQL database.*
 
 ## Users
