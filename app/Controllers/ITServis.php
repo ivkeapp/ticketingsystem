@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Log;
 use App\Models\Tiketi;
 use App\Models\User;
 
@@ -11,14 +12,17 @@ class ITServis extends BaseController
 	{
 
 		$userModel = new User();
-		$ticketsModel = new Tiketi();
-
-		$data['usersAll'] = $userModel->getUsersByDepartment('3');
+		$ticketCount = new Log();
+		
 		$data['usersIds'] = $userModel->getUsersIDByDepartment('3');
-		$data['tickets'] = array();
+		$data['tCounters'] = array();
+		$data['tCountersToday'] = array();
+
 		foreach($data['usersIds'] as $id){
-			array_push($data['tickets'], $ticketsModel->getTicketsByStaffOwner($id->id));
+			array_push($data['tCounters'], $ticketCount->getResolvedCountFor30Days($id->id, 3));
+			array_push($data['tCountersToday'], $ticketCount->getResolvedCountToday($id->id, 3));
 		}
+
 		return view('itservis', $data);
 	}
 }
