@@ -18,7 +18,7 @@ class Tiketi extends Model{
 
     public function getAllTickets(){
         return $this->builder()->select('tickets.id, tickets.title, tickets.date_added, types.name as type,
-        tickets.model, brands.name as brand, tickets.serial_number, tickets.description, users.username as staff_owner,
+        tickets.model, brands.name as brand, tickets.serial_number, tickets.description, users.username as staff_owner, users.id as staff_id, 
         tickets.is_resolved', false)
         ->join('types', 'tickets.type = types.id')
         ->join('users','tickets.staff_owner = users.id')
@@ -29,7 +29,7 @@ class Tiketi extends Model{
 
     public function getResolvedTickets(){
         return $this->builder()->select('tickets.id, tickets.title, tickets.date_added, types.name as type,
-        tickets.model, brands.name as brand, tickets.serial_number, tickets.description, users.username as staff_owner,
+        tickets.model, brands.name as brand, tickets.serial_number, tickets.description, users.username as staff_owner, users.id as staff_id, 
         tickets.is_resolved', false)
         ->join('types', 'tickets.type = types.id')
         ->join('users','tickets.staff_owner = users.id')
@@ -41,7 +41,7 @@ class Tiketi extends Model{
 
     public function getUnResolvedTickets(){
         return $this->builder()->select('tickets.id, tickets.title, tickets.date_added, types.name as type,
-        tickets.model, brands.name as brand, tickets.serial_number, tickets.description, users.username as staff_owner,
+        tickets.model, brands.name as brand, tickets.serial_number, tickets.description, users.username as staff_owner, users.id as staff_id, 
         tickets.is_resolved', false)
         ->join('types', 'tickets.type = types.id')
         ->join('users','tickets.staff_owner = users.id')
@@ -67,7 +67,7 @@ class Tiketi extends Model{
 
     public function getAllTicketsByStaffOwner($staffOwner){
         return $this->builder()->select('tickets.id, tickets.title, tickets.date_added, types.name as type,
-        tickets.model, brands.name as brand, tickets.serial_number, tickets.description, users.username as staff_owner,
+        tickets.model, brands.name as brand, tickets.serial_number, tickets.description, users.username as staff_owner, users.id as staff_id, 
         tickets.is_resolved', false)
         ->join('types', 'tickets.type = types.id')
         ->join('users','tickets.staff_owner = users.id')

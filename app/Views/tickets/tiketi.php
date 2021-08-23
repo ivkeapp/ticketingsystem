@@ -69,10 +69,11 @@
                         $helpArr[] = '<p style="color: red">Nerešen</p>';
                      }
                      
-                     if($row->is_resolved == '0')
-                        $helpArr[] = anchor("tiketi/solved/".$row->id, "<i class='fas fa-check'></i>  Označi kao rešen ", ['class' => 'btn btn-sm btn-success']);
-                     else
-                        $helpArr[] = anchor("tiketi/solved/".$row->id, "<i class='fas fa-check'></i>  Označi kao rešen ", ['class' => 'btn btn-sm btn-success disabled']);
+                     if($row->is_resolved == '0' && has_permission('ticket_mark_resolved')){$helpArr[] = anchor("tiketi/solved/".$row->id, "<i class='fas fa-check'></i>  Označi kao rešen ", ['class' => 'btn btn-sm btn-success']);}
+                        //$helpArr[] = anchor("tiketi/solved/".$row->id, "<i class='fas fa-check'></i>  Označi kao rešen ", ['class' => 'btn btn-sm btn-success']);
+                     elseif($row->is_resolved == '0' && $row->staff_id == user_id()){$helpArr[] = anchor("tiketi/solved/".$row->id, "<i class='fas fa-check'></i>  Označi kao rešen ", ['class' => 'btn btn-sm btn-success']);}
+                     else {$helpArr[] = anchor("tiketi/solved/".$row->id, "<i class='fas fa-check'></i>  Označi kao rešen ", ['class' => 'btn btn-sm btn-success disabled']);}
+                        
                      if(has_permission('ticket_delete')){
                         $helpArr[] = anchor("tiketi/delete/".$row->id, "<i class='fas fa-trash'></i> Obriši tiket", ['class' => 'btn btn-sm btn-danger']);
                      }
