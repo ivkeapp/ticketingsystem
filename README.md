@@ -5,7 +5,7 @@ Software system in the form of an internet application.
 
 *Used technologies: HTML5, CSS3, JavaScript, PHP, CodeIgniter 4 and MySQL database.*
 
-![alt text](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system.jpg)
+![IT hardware service application](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system2.jpg)
 
 ## Users
 
