@@ -47,8 +47,6 @@ Logged-in users can change personal data: username, first name, last name, email
 
 ## Tickets
 
-![Tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system3.jpg)
-
 Each ticket in the system has the following fields:
 
 • title (brief description of the problem),  
@@ -60,6 +58,8 @@ Each ticket in the system has the following fields:
 • detailed description of the problem,  
 • to whom the ticket was assigned,  
 • status whether the ticket has been resolved.
+
+![Tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system3.jpg)
 
 There are four pages to view and add tickets:  
 
