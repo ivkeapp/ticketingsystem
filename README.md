@@ -5,6 +5,9 @@ Software system in the form of an internet application.
 
 *Used technologies: HTML5, CSS3, JavaScript, PHP, CodeIgniter 4 and MySQL database.*
 
+![IT hardware service application](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system.jpg)
+
+# General characteristics
 ## Users
 
 There are three types of users:  
@@ -56,6 +59,8 @@ Each ticket in the system has the following fields:
 • to whom the ticket was assigned,  
 • status whether the ticket has been resolved.
 
+![Tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system3.jpg)
+
 There are four pages to view and add tickets:  
 
 • Review of resolved tickets,  
@@ -66,6 +71,8 @@ There are four pages to view and add tickets:
 An overview of resolved and unresolved tickets is displayed in the form of a table where, in addition to the listed fields, there is a field with the option to mark tickets as resolved, which can be used only by users assigned to a given ticket or administrator, and a field for deleting tickets.
 
 The page for adding a ticket contains a form with fields: short description, device type and manufacturer in the form of a drop-down list, device model, serial number, detailed description of the fault and to whom the ticket is assigned in the form of a drop-down list. The fields of the ticket opening date and the resolution status are filled in automatically when entering the database.
+
+![Adding tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system2.jpg)
 
 The "My Tickets" page lists all the tickets that have been assigned to the currently logged in user with the same options as in the above overview.
 
@@ -85,6 +92,8 @@ The application monitors user activity with the following items:
 • adding and deleting users
 
 Each user has the ability to view his activities. Activities cannot be deleted.
+
+![Activity log screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system4.jpg)
 
 ## Statistics
 
