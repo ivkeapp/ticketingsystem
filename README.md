@@ -7,6 +7,7 @@ Software system in the form of an internet application.
 
 ![IT hardware service application](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system2.jpg)
 
+# General characteristics
 ## Users
 
 There are three types of users:  
