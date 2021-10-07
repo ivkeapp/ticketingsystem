@@ -5,7 +5,7 @@ Software system in the form of an internet application.
 
 *Used technologies: HTML5, CSS3, JavaScript, PHP, CodeIgniter 4 and MySQL database.*
 
-![IT hardware service application](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system2.jpg)
+![IT hardware service application](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system.jpg)
 
 # General characteristics
 ## Users
@@ -47,6 +47,8 @@ Logged-in users can change personal data: username, first name, last name, email
 
 ## Tickets
 
+![Tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system3.jpg)
+
 Each ticket in the system has the following fields:
 
 • title (brief description of the problem),  
@@ -70,6 +72,8 @@ An overview of resolved and unresolved tickets is displayed in the form of a tab
 
 The page for adding a ticket contains a form with fields: short description, device type and manufacturer in the form of a drop-down list, device model, serial number, detailed description of the fault and to whom the ticket is assigned in the form of a drop-down list. The fields of the ticket opening date and the resolution status are filled in automatically when entering the database.
 
+![Adding tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system2.jpg)
+
 The "My Tickets" page lists all the tickets that have been assigned to the currently logged in user with the same options as in the above overview.
 
 ## Authorized services
@@ -88,6 +92,8 @@ The application monitors user activity with the following items:
 • adding and deleting users
 
 Each user has the ability to view his activities. Activities cannot be deleted.
+
+![Activity log screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system4.jpg)
 
 ## Statistics
 
