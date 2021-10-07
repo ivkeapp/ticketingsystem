@@ -28,7 +28,7 @@
         endforeach; ?>
 
         <script>
-            let seconds = 900;
+            let seconds = 1800;
             //alert("Bicete automatski izlogovani za " + seconds + " sekundi");
             setTimeout(function(){
                 window.location = "<?=base_url('logout')?>";
