@@ -21,7 +21,7 @@ In addition to logging in to the system, the user has a link to a new website wi
 
 The administrator is a user with special privileges to view all sections of the system. The logistician should have the privilege of inspecting sections of the logistics sector, and the IT service technician should have the privilege of inspecting sections of the service sector.
 
-![Tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system5.jpg)
+![Users screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system5.jpg)
 
 When registering a user, the following information must be entered:  
 •	name,  
@@ -61,7 +61,7 @@ Each ticket in the system has the following fields:
 • to whom the ticket was assigned,  
 • status whether the ticket has been resolved.
 
-
+![Tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system5.jpg)
 
 There are four pages to view and add tickets:  
 
