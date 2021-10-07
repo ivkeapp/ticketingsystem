@@ -5,6 +5,8 @@ Software system in the form of an internet application.
 
 *Used technologies: HTML5, CSS3, JavaScript, PHP, CodeIgniter 4 and MySQL database.*
 
+![alt text](https://github.com/ivkeapp/ticketingsystem/blob/master/ticketing_system.jpg?raw=true)
+
 ## Users
 
 There are three types of users:  
