@@ -108,6 +108,8 @@ Each page shows a link to return to the home page.
 Each user has the option to log out of the system.  
 After 30 minutes of inactivity, the user will be automatically logged out of the system.
 
+# Installation
+
 ## Migration
 
 You can migrate database simply buy running command `php spark migrate -all`
