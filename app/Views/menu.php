@@ -2,9 +2,9 @@
 
     $links = [
 
-        'Settings' => '/settings',
-        'Activity Log' => '/activity',
-        'Logout' => '/logout'
+        'Podešavanja' => '/settings',
+        'Aktivnosti' => '/activity',
+        'Odjava' => '/logout'
 
     ];
 
