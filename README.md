@@ -61,7 +61,7 @@ Each ticket in the system has the following fields:
 • to whom the ticket was assigned,  
 • status whether the ticket has been resolved.
 
-![Tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system5.jpg)
+![Tickets screenshot](https://github.com/ivkeapp/ticketingsystem/blob/master/public/assets/examples/ticketing_system3.jpg)
 
 There are four pages to view and add tickets:  
 
@@ -107,6 +107,8 @@ Each page contains a navigation menu and a header.
 Each page shows a link to return to the home page.  
 Each user has the option to log out of the system.  
 After 30 minutes of inactivity, the user will be automatically logged out of the system.
+
+# Installation
 
 ## Migration
 
