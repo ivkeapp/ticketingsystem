@@ -114,7 +114,7 @@ After 30 minutes of inactivity, the user will be automatically logged out of the
 
 You can migrate database simply buy running command `php spark migrate -all`
 
-*You should change admin credentials in initial seed before login to the system or simply regester a new webmaster and assign right manually*
+*You should change admin credentials in initial seed before login to the system or simply register a new webmaster and assign rights manually*
 
 ## Myth Auth
 
